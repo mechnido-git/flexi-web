@@ -2,6 +2,8 @@
     position: relative;
     display: flex;
     align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
 }
 
 .hero > video{
@@ -10,6 +12,8 @@
     object-fit: cover;
     object-position: center center;
     opacity: 1;
+    transform: translateZ(-2px) scale(1.21);
+    z-index: -1;
 }
 
 .hero > .content{
