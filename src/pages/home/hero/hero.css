@@ -1,0 +1,56 @@
+.hero{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero > video{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    opacity: 1;
+}
+
+.hero > .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.hero > .content > .titles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    gap: 15px;
+}
+
+.hero > .content > .titles > .title{
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.hero > .content > .titles > .subtitle{
+    line-height: 1.8em;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.hero > .content > .cover{
+    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .9), rgba(0, 0, 0, 1));
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.hero > .content > .cover > .btns{
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 15px;
+}

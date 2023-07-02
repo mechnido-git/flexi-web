@@ -1,0 +1,19 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 2rem 4rem;
+    justify-content: space-between;
+    background: transparent;
+}
+
+.navbar > .left > p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 8px;
+}
+
+.navbar > .center{
+    display: flex;
+    gap: 20px;
+}

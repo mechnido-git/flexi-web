@@ -1,0 +1,5 @@
+.home > .navbar{
+    position: fixed;
+    width: calc(100vw - 8rem);
+    z-index: 10;
+}
