@@ -1,0 +1,51 @@
+.s-btn {
+    display: flex;
+    border-radius: 8px;
+    font-size: 16px;
+    overflow: hidden;
+    align-self: self-start;
+    justify-self: start;
+}
+
+.s-btn > div{
+    padding: .7rem .8rem;
+    transition: .3s;
+}
+
+.s-btn.white{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.s-btn.white > div:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.s-btn.white > span{
+    border-left: 1px solid black;
+    padding: .4rem .4rem;
+    font-size: 28px;
+    font-weight: 100;
+}
+
+.s-btn.black{
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.s-btn.black > div:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.s-btn.black > span{
+    border-left: 1px solid white;
+    padding: .4rem .4rem;
+    font-size: 28px;
+    font-weight: 100;
+}
