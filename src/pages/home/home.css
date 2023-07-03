@@ -54,3 +54,148 @@
     width: 340px;
     border-left: 3px solid black;
 }
+
+.home .autono-div{
+    position: relative;
+    display: flex;
+    align-items: center;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.home .autono-div > img{
+    width: 1522px;
+    height: 880px;
+    object-fit: cover;
+    object-position: 100% 50%;
+    transform: translateZ(-10px) scale(2.1);
+    z-index: -1;
+}
+
+.home .autono-div > .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    
+}
+
+.home  .autono-div > .content > .details-container{
+    padding: 2rem;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.home .autono-div > .content > .details-container > .details{
+    display: grid;
+    grid-template-rows: 1fr 1fr auto;
+    gap: 30px;
+    border-left: 1px solid white;
+    
+}
+
+.home .autono-div > .content .details > .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.home .autono-div > .content .details > .title > span{
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 0 50px;
+}
+
+.home .autono-div > .content .details > .title > p{
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 45px;
+    padding: 0 50px;
+    border-left: 3px solid white;
+}
+
+.home .autono-div > .content .details > .info{
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    width: 350px;
+    align-self: flex-end;
+    padding: 0 50px;
+}
+
+.home .autono-div > .content .details .s-btn{
+    margin: 0 50px;
+}
+
+.home .autono-metrics{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    align-items: center;
+    gap: 20px;
+}
+
+.home .autono-metrics > img{
+    width: 761px;
+    height: 760px;
+    object-fit: cover;
+    object-position: 100% 50%;
+}
+
+.home .autono-metrics > .metrics-div{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.home .autono-metrics > .metrics-div > span{
+    line-height: 20px;
+    font-size: 24px;
+    letter-spacing: 4px;
+    font-weight: 100;
+}
+
+.home .autono-metrics > .metrics-div > .metrics-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    column-gap: 30px;
+    justify-items: start;
+}
+
+.home .autono-metrics > .metrics-div > .metrics-container > .metrics{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    min-width: 200px;
+}
+
+.home .autono-metrics > .metrics-div > .metrics-container > .metrics > .number{
+    border-bottom: 1px solid black;
+    padding: 1rem 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.home .autono-metrics > .metrics-div > .metrics-container > .metrics > .number::after{
+    content: " ";
+    height: 2px;
+    width: 25px;
+    color: black;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+}
+
+.home .autono-metrics > .metrics-div > .metrics-container > .metrics > .number span{
+    letter-spacing: 4px;
+    font-size: 40px;
+}
+
+.home .autono-metrics > .metrics-div > .metrics-container > .metrics > p{
+    align-self: center;
+}

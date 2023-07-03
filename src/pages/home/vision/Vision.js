@@ -1,25 +1,28 @@
 import React from "react";
-import './vision.css'
+import "./vision.css";
+import SecondaryBtn from "../../../components/secondaryBtn/SecondaryBtn";
 
-function Vision() {
+export function DetailsSction({ data, btn }) {
+  return (
+    <div className="details-container">
+      <div className="details">
+        <div className="title">
+          <span>{data.title}</span>
+          <p>{data.subtitle}</p>
+        </div>
+        <div className="info">
+          <p>{data.info}</p>
+        </div>
+        {btn && <SecondaryBtn content={btn.content} theme={btn.theme} /> }
+      </div>
+    </div>
+  );
+}
+
+function Vision({ data }) {
   return (
     <div className="vision">
-      <div className="details-container">
-        <div className="details">
-          <div className="title">
-            <span>VISION</span>
-            <p>We’re Changing the Way the World Thinks About Cars</p>
-          </div>
-          <div className="info">
-            <p>
-              I'm a paragraph. Click here to add your own text and edit me. It’s
-              easy. Just click “Edit Text” or double click me to add your own
-              content and make changes to the font. I’m a great place for you to
-              tell a story and let your users know a little more about you.
-            </p>
-          </div>
-        </div>
-      </div>
+      <DetailsSction data={data} />
       <div className="show">
         <img
           src="https://static.wixstatic.com/media/c837a6_ea5eeb99f72d42b0a22f459e01bfd33c~mv2.jpg/v1/fill/w_913,h_840,al_l,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_ea5eeb99f72d42b0a22f459e01bfd33c~mv2.jpg"
