@@ -22,73 +22,35 @@
     background-color: white;
 }
 
-.home .vision{
+.home .services{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: black;
-    color: white;
-    position: relative;
-    height: auto;
-    overflow: hidden;
+    background-color: white;
+    justify-items: center;
 }
 
-.home .vision > .details-container{
-    display: flex;
-    justify-content: center;
-    height: 840px;
-    z-index: 2;
-    margin: 0px 50px;
+.home .services > .details-container{
+    margin: 150px 50px;
 }
 
-.home .vision > .details-container > .details{
-    margin: 170px 0;
+.home .services > .details-container > .details{
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 60px;
-    border-left: 1px solid white;
-
-}
-
-.home .vision .details > .title{
-    display: flex;
-    flex-direction: column;
+    grid-template-rows: .5fr 1fr;
     justify-content: space-between;
-    width: 400px;
+    border-left: 1px solid black;
 }
 
-.home .vision .details > .title > span{
+.home .services > .details-container > .details > span{
     font-size: 14px;
     letter-spacing: 2px;
     padding: 0 50px;
 }
 
-.home .vision .details > .title > p{
+.home .services > .details-container > .details > p{
     font-size: 24px;
     letter-spacing: 2px;
     line-height: 45px;
     padding: 0 50px;
-    border-left: 3px solid white;
-}
-
-.home .vision .details > .info{
-    font-size: 16px;
-    line-height: 30px;
-    letter-spacing: 1px;
-    width: 350px;
-    align-self: flex-end;
-    padding: 0 50px;
-}
-
-.home .vision > .show{
-    position: absolute;
-    top: 0;
-    right: -245px;
-    height: 840px;
-    z-index: 1;
-}
-
-.home .vision > .show > img{
-    height: 840px;
-    object-fit: cover;
-    object-position: 0% 50%;
+    width: 340px;
+    border-left: 3px solid black;
 }
