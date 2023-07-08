@@ -68,7 +68,7 @@
     height: 880px;
     object-fit: cover;
     object-position: 100% 50%;
-    transform: translateZ(-10px) scale(2.1);
+    transform: translateZ(-20px) scale(3.1);
     z-index: -1;
 }
 
@@ -198,4 +198,91 @@
 
 .home .autono-metrics > .metrics-div > .metrics-container > .metrics > p{
     align-self: center;
+}
+
+.home .vision.industry .details > .title{
+    width: 280px;
+}
+
+.home .vision.industry > .sponsors{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 50px;
+    justify-items: center;
+    color: white;
+    align-items: center;
+    margin: 30px 0;
+    align-content: center;
+}
+
+.home .vision.industry > .sponsors > .sponsor{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+    justify-items: center;
+}
+
+.home .vision.industry > .sponsors > .sponsor img{
+    width: 128px;
+    height: 64px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.home .vision.industry > .sponsors > .sponsor > span{
+    line-height: 10px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.home .careers{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 0;
+    align-content: center;
+    justify-items: center;
+    border-top: 1px solid white;
+    background-color: black;
+    color: white;
+}
+
+.home .careers > .details-container{
+    color: white;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.home .careers > .details-container > .details{
+    border-left: 1px solid white;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    position: relative;
+    justify-content: center;
+}
+
+.home .careers > .details-container > .details::before{
+    content: "";
+    width: 3px;
+    height: 60%;
+    background-color: white;
+    color: white;
+    position: absolute;
+    left: 0;
+}
+
+.home .careers > .details-container > .details > p{
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 45px;
+    width: 350px;
+}
+
+.home .careers > .details-container > .details > span{
+    font-size: 14px;
+    letter-spacing: 2px;
 }

@@ -27,6 +27,25 @@ const services = [
   }
 ]
 
+const sponsors = [
+  {
+    name: "GENERAL TRANSPORT",
+    src: "https://static.wixstatic.com/media/c837a6_a8508672733a4bb7ba100662952d4f6f~mv2.png/v1/fill/w_175,h_175,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/General_Transport.png"
+  },
+  {
+    name: "IDI SOFTWARE",
+    src: "https://static.wixstatic.com/media/c837a6_24669e1d20cd4f079fd2ea5e253c99b8~mv2.png/v1/fill/w_110,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/IDI_Software.png"
+  },
+  {
+    name: "IMOGEN CARS",
+    src: "https://static.wixstatic.com/media/c837a6_db1c6e9c1b95497f81465ccd218fa048~mv2.png/v1/fill/w_110,h_100,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Imogen_Cars.png"
+  },
+  {
+    name: "TRI-NEX",
+    src: "https://static.wixstatic.com/media/c837a6_81bc98e386764170adbb3e97cc7e1655~mv2.png/v1/fill/w_160,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Tri-Nex%20.png"
+  }
+]
+
 function Home() {
   return (
     <div className='home'>
@@ -82,6 +101,33 @@ function Home() {
                 <div className="number"><span>326</span></div>
                 <p>PARTNERS</p>
               </div>
+            </div>
+          </div>
+        </div>
+        <div className="industry vision">
+          <DetailsSction data={{ title: "INDUSTRY", subtitle: "Our Partners", info: `Click here to add your own content and customize the text. This is a great place to tell a story about your company and let your users know a little more about the company's history, the team's background, or any other information you'd like to share. Just click "Edit Text" to get started.` }} />
+          <div className="sponsors">
+            {sponsors.map((item, key)=><div key={key} className='sponsor' >
+              <img src={item.src} alt="" />
+              <span>{item.name}</span>
+              </div>)}
+          </div>
+        </div>
+        <div className="careers">
+            <div className="details-container">
+              <div className="details">
+
+                  <span>CAREERS</span>
+                  <p>We’re looking for innovative talent to join our team. See all positions and submit your CV</p>
+
+                <div className="button">
+                  <SecondaryBtn content='Openings' theme='black' />
+                </div>
+              </div>
+          </div>
+          <div className="card-container">
+            <div className="card">
+              hello
             </div>
           </div>
         </div>

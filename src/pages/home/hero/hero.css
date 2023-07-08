@@ -12,7 +12,7 @@
     object-fit: cover;
     object-position: center center;
     opacity: 1;
-    transform: translateZ(-2px) scale(1.21);
+    transform: translateZ(-8px) scale(1.81);
     z-index: -1;
 }
 
