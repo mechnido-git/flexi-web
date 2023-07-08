@@ -16,7 +16,6 @@ function Navbar() {
         <div className="right">
             <PrimaryBtn content='Login' theme='black' />
         </div>
-
     </div>
   )
 }
