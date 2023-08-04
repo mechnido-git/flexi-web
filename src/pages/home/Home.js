@@ -4,8 +4,10 @@ import Hero from './hero/Hero'
 import './home.css'
 import Vision, { DetailsSction } from './vision/Vision'
 import Service from './service/Service'
-import SecondaryBtn from '../../components/secondaryBtn/SecondaryBtn'
+// import SecondaryBtn from '../../components/secondaryBtn/SecondaryBtn'
 
+import SecondaryBtn from "../../components/secondaryBtn/SecondaryBtn"
+import Cards from '../../components/cards/Cards'
 const services = [
   {
     name: "AUTONOMOUS DRIVING",
@@ -43,6 +45,29 @@ const sponsors = [
   {
     name: "TRI-NEX",
     src: "https://static.wixstatic.com/media/c837a6_81bc98e386764170adbb3e97cc7e1655~mv2.png/v1/fill/w_160,h_80,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Tri-Nex%20.png"
+  }
+]
+
+const carddata= [
+  {
+    head:"ELECTRICAL ENGINEER",
+    subhead:"San Francisco, CA",
+    para:"I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. "
+  },
+  {
+    head:"DATA SCIENTIST",
+    subhead:"San Francisco, CA",
+    para:"I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you."
+  },
+  {
+    head:"ARTIFICIAL INTELLIGENCE RESEARCHER",
+    subhead:"San Francisco, CA",
+    para:"I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font."
+  },
+  {
+    head:"DEEP LEARNING ENGINEER",
+    subhead:"San Francisco, CA",
+    para:"I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you."
   }
 ]
 
@@ -125,11 +150,7 @@ function Home() {
                 </div>
               </div>
           </div>
-          <div className="card-container">
-            <div className="card">
-              hello
-            </div>
-          </div>
+       <Cards head={carddata[0].head}  subhead={carddata[0].subhead}  para={carddata[0].para}/>
         </div>
       </div>
     </div>
