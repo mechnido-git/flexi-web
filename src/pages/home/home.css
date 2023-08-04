@@ -286,3 +286,55 @@
     font-size: 14px;
     letter-spacing: 2px;
 }
+
+.card-container .card .para{
+ 
+    margin-top: 20px;
+    line-height: 30px;
+    margin-bottom: 70px;
+   
+}
+
+.subheading{
+    margin-top: 60px;
+    color: rgb(180,180,180);
+
+}
+ /* .card{
+ width: 300px;
+} */
+
+.card-container{
+    color: white;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    border:2px solid white;
+     padding: 60px 40px; 
+   width: 336px;
+   height: 400px;
+    border-radius: 14px;
+    
+}
+.card-container .card ul{
+    display: flex;
+   justify-content: center;
+   margin-top: 20px;
+   align-self: center;
+   
+}
+.card-container .card ul span{
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: aliceblue;
+    margin:12px;
+    cursor: pointer;
+
+   /* display: flex;
+   justify-self: center; */
+}
+
+    /* border:2px;
+    border-radius: 5px;
+} */

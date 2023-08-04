@@ -3,7 +3,8 @@
     align-items: center;
     padding: 2rem 4rem;
     justify-content: space-between;
-    background: transparent;
+    /* background: transparent; */
+    background-color: white;
 }
 
 .navbar > .left > p{
