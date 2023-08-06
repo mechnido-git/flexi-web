@@ -1,17 +1,26 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import './navbar.css'
 import PrimaryBtn from '../primaryBtn/PrimaryBtn'
 import { StoreContext } from '../../store/StoreContext'
+import SignIn from '../signIn/SignIn'
+
 
 function Navbar() {
 
   const { model, models, slides } = useContext(StoreContext)
 
+  const [login, setLogin] = useState(false)
+
+  const popup = ()=>{
+    setLogin(true)
+    document.querySelector('.main').classList.add('disable-scroll')
+  }
+
   const move = (index) => {
     slides.current.splide.Components.Move.move(
       index,
       index,
-      index+1
+      index + 1
     )
   }
 
@@ -26,8 +35,12 @@ function Navbar() {
         ))}
       </div>
       <div className="right">
-        <PrimaryBtn content='Login' theme='black' />
+        <PrimaryBtn content='Login' handleClick={popup} theme='black' />
       </div>
+      {login && <div className='wrapper'>
+          {/* <SignIn setLogin={setLogin} /> */}
+          <SignIn />
+      </div>}
     </div>
   )
 }

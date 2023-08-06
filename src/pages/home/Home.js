@@ -74,8 +74,8 @@ const carddata= [
 function Home() {
   return (
     <div className='home'>
-      <Navbar />
       <div className="main">
+      <Navbar />
         <Hero />
         <div className="gap"></div>
         <Vision data={{ title: "VISION", subtitle: "We’re Changing the Way the World Thinks About Cars", info: "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you." }} />

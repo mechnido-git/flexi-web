@@ -11,7 +11,7 @@ function Hero() {
 
     return (
         <div className='hero'>
-            <video src={scooter} autoPlay muted loop preload='auto' />
+           
             <div className="content">
                 <Splide
                     ref={slides}
@@ -25,11 +25,12 @@ function Hero() {
                     }}
                     onMove={(splide, prev, next) => {
                         setModel(prev);
-                      }}
+                    }}
                 >
                     <SplideTrack>
                         {models.map((item, index) => (
                             <SplideSlide>
+                                <video src={scooter} autoPlay muted loop preload='auto' />
                                 <div className="titles">
                                     <p className="title">{item.name}</p>
                                     <p className="subtitle">Revolutionise your commute with electric kick scooters</p>
