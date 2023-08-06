@@ -48,28 +48,6 @@ const sponsors = [
   }
 ]
 
-const carddata= [
-  {
-    head:"ELECTRICAL ENGINEER",
-    subhead:"San Francisco, CA",
-    para:"I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. "
-  },
-  {
-    head:"DATA SCIENTIST",
-    subhead:"San Francisco, CA",
-    para:"I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you."
-  },
-  {
-    head:"ARTIFICIAL INTELLIGENCE RESEARCHER",
-    subhead:"San Francisco, CA",
-    para:"I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font."
-  },
-  {
-    head:"DEEP LEARNING ENGINEER",
-    subhead:"San Francisco, CA",
-    para:"I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you."
-  }
-]
 
 function Home() {
   return (
@@ -146,11 +124,12 @@ function Home() {
                   <p>We’re looking for innovative talent to join our team. See all positions and submit your CV</p>
 
                 <div className="button">
-                  <SecondaryBtn content='Openings' theme='black' />
+                  
                 </div>
+                <SecondaryBtn content='Openings' theme='black' />
               </div>
           </div>
-       <Cards head={carddata[0].head}  subhead={carddata[0].subhead}  para={carddata[0].para}/>
+       <Cards/>
         </div>
       </div>
     </div>
