@@ -37,7 +37,7 @@ export default function Footer() {
         <span className='subs'>SUBSCRIBE</span>
             <span className='mess'>Sign up to receive Autono news and updates.</span>
             <label className='mess'>Email *</label>
-            <div className='input'><input className='email' type='email'/>
+            <div className='input'><input  type='email'/>
             <button className='btn'>Subscribe</button>
             </div>
            

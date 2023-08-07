@@ -66,14 +66,14 @@
     justify-content: center;
 }
 
-.email{
+/* .email{
     display: block;
-    margin: 40px 0px;
+   
     width: 264px;
     height: 38px;
     border-radius: 10px 0px 0px 10px;
     border-color: black;
-}
+} */
 
 
 .footer-right .subs{
@@ -98,14 +98,17 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-   
+    margin: 40px 0px;
     position: relative;
     font-size: 18px;
-    width: 500px;
+   
     
 }
 .data .input input{
     background-color:rgb( 239,165,115);
+    width: 280px;
+    border-radius: 7px;
+
 }
 .btn{
     font-size: 16px;
@@ -117,7 +120,7 @@
     color: #fff;
     background-color: #000;
     border: 1px solid #fff;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 8px;
     height: 42px;
     width: max-content;
    margin: auto;
