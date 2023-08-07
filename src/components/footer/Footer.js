@@ -1,6 +1,6 @@
 import React from 'react'
 import "../footer/Footer.css";
-import PrimaryBtn from '../primaryBtn/PrimaryBtn';
+
 export default function Footer() {
   return (
     <>
