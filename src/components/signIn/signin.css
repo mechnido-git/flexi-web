@@ -1,0 +1,124 @@
+.signin-div{
+    background-color: white;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    border-radius: 5px;
+    width: 450px;
+}
+
+.signin-div form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.eye-icon{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.signin-div input[type="email"],
+.signin-div input[type="password"],
+.signin-div input[type="button"],
+.signin-div input[type="phone"],
+.signin-div input[type="text"]
+{
+    padding: 8px 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid black;
+    flex: 1;
+}
+
+.signin-div .input-div{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+}
+
+.signin-div input[type="button"]{
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: 2px solid black; 
+    transition: .3s;
+    cursor: pointer;
+}
+.signin-div input[type="button"]:hover{
+    background-color: white;
+    color: black;
+}
+
+.signin-div .forg{
+    align-self: center;
+}
+
+.signin-div .divider{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 10px;
+}
+
+.signin-div .divider::before,.signin-div .divider::after{
+    content: "";
+    height: 1px;
+    background-color: black;
+}
+
+.signin-div .new-acc{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.signin-div .error{
+    color: red;
+    font-size: 14px;
+    text-align: center;
+}
+
+.media-options a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 8px 10px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+img.google-img{
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    height: 30px;
+    width: 30px;
+    
+    object-fit: cover;
+}
+
+a.google{
+    border: 1px solid #CACACA;
+}
+a.google span{
+    font-weight: 500;
+    opacity: 0.6;
+    color: var(--subHeading);
+}
+input.inp-error{
+    border: 2px solid red !important;
+}

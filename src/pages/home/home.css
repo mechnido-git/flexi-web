@@ -1,18 +1,15 @@
-.home{
-   
-}
 
 .home > .main{
     height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
     perspective: 10px;
+    position: relative;
 }
 
-.home > .navbar{
-    position: fixed;
-    width: calc(100vw - 8rem);
-    z-index: 10;
+.home .navbar{
+    position: sticky;
+    z-index: 4;
     top: 0;
 }
 

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../../components/navbar/Navbar'
 import Hero from './hero/Hero'
 import './home.css'
@@ -8,6 +8,10 @@ import Service from './service/Service'
 import Footer from '../../components/footer/Footer';
 import SecondaryBtn from "../../components/secondaryBtn/SecondaryBtn"
 import Cards from '../../components/cards/Cards'
+import { doc, getDoc, setDoc } from 'firebase/firestore'
+import { auth, db } from '../../firebase/config'
+import { GoogleAuthProvider, getRedirectResult, onAuthStateChanged } from 'firebase/auth'
+import Spinner from '../../components/Spinner'
 const services = [
   {
     name: "AUTONOMOUS DRIVING",
@@ -49,11 +53,81 @@ const sponsors = [
 ]
 
 
+
+
 function Home() {
+
+  const [loading, setLoading] = useState(true)
+  const [redirectLoad, setRedirectLoad] = useState(false)
+
+  const checkUser = async (user) => {
+console.log(user.uid);
+try {
+      const docRef = doc(db, "users", user.uid);
+      const docSnap = await getDoc(docRef);
+      if (docSnap.exists()) {
+        // console.log("Document data:", docSnap.data());
+      } else {
+        // docSnap.data() will be undefined in this case
+        await setDoc(doc(db, "users", user.uid), {
+          name: user.displayName,
+          email: user.email,
+          cover: true
+        });
+      }
+      setRedirectLoad(false)
+    } catch (error) {
+      alert(error)
+      setRedirectLoad(false)
+    }
+  }
+
+  useEffect(() => {
+    getRedirectResult(auth)
+    .then((result) => {
+      // This gives you a Google Access Token. You can use it to access Google APIs.
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      setRedirectLoad(true)
+      const token = credential.accessToken;
+      // The signed-in user info.
+      const user = result.user;
+      // IdP data available using getAdditionalUserInfo(result)
+      checkUser(user)
+
+    }).catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // The email of the user's account used.
+      // The AuthCredential type that was used.
+      const credential = GoogleAuthProvider.credentialFromError(error);
+      // ...
+    });
+    onAuthStateChanged(auth, (user) => {
+
+      if (user) {
+        // setUserName(user.displayName);
+        // setName(user.displayName);
+        // setEmail(user.email);
+        // if (user.photoURL) setDp(user.photoURL);
+        setLoading(false);
+        // if(last[0] === "#"){
+        //   const id = last.slice(1, last.length)
+        //   console.log(id);
+        //   document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+        // }
+      } else {
+        setLoading(false);
+      }
+    });
+  }, []);
+
+  if (loading || redirectLoad) return <Spinner />
+
   return (
     <div className='home'>
-      <Navbar />
       <div className="main">
+        <Navbar />
         <Hero />
         <div className="gap"></div>
         <Vision data={{ title: "VISION", subtitle: "We’re Changing the Way the World Thinks About Cars", info: "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you." }} />
@@ -110,18 +184,18 @@ function Home() {
         <div className="industry vision">
           <DetailsSction data={{ title: "INDUSTRY", subtitle: "Our Partners", info: `Click here to add your own content and customize the text. This is a great place to tell a story about your company and let your users know a little more about the company's history, the team's background, or any other information you'd like to share. Just click "Edit Text" to get started.` }} />
           <div className="sponsors">
-            {sponsors.map((item, key)=><div key={key} className='sponsor' >
+            {sponsors.map((item, key) => <div key={key} className='sponsor' >
               <img src={item.src} alt="" />
               <span>{item.name}</span>
-              </div>)}
+            </div>)}
           </div>
         </div>
         <div className="careers">
-            <div className="details-container">
-              <div className="details">
+          <div className="details-container">
+            <div className="details">
 
-                  <span>CAREERS</span>
-                  <p>We’re looking for innovative talent to join our team. See all positions and submit your CV</p>
+              <span>CAREERS</span>
+              <p>We’re looking for innovative talent to join our team. See all positions and submit your CV</p>
 
                 <div className="button">
                   <SecondaryBtn content='Openings' theme='black' />
