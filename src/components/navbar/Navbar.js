@@ -1,17 +1,29 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './navbar.css'
 import PrimaryBtn from '../primaryBtn/PrimaryBtn'
 import { StoreContext } from '../../store/StoreContext'
 import SignIn from '../signIn/SignIn'
-
+import { onAuthStateChanged } from 'firebase/auth'
+import { auth } from '../../firebase/config'
 
 function Navbar() {
 
   const { model, models, slides } = useContext(StoreContext)
+  const [username, setUsername] = useState(false)
+  const [dp, setDp] = useState("https://img.icons8.com/ios-glyphs/60/user--v1.png")
 
   const [login, setLogin] = useState(false)
 
-  const popup = ()=>{
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setUsername(user.displayName);
+        if (user.photoURL) setDp(user.photoURL);
+      }
+    })
+  }, [])
+
+  const popup = () => {
     setLogin(true)
     document.querySelector('.main').classList.add('disable-scroll')
   }
@@ -35,11 +47,14 @@ function Navbar() {
         ))}
       </div>
       <div className="right">
-        <PrimaryBtn content='Login' handleClick={popup} theme='black' />
+        {username ? <>
+          <img src={dp} alt="dp" />
+          <h4>{username}</h4>
+        </> : <PrimaryBtn content='Login' handleClick={popup} theme='black' />}
       </div>
       {login && <div className='wrapper'>
-          {/* <SignIn setLogin={setLogin} /> */}
-          <SignIn />
+        {/* <SignIn setLogin={setLogin} /> */}
+        <SignIn />
       </div>}
     </div>
   )
