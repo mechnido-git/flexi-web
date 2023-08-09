@@ -5,7 +5,7 @@ import './home.css'
 import Vision, { DetailsSction } from './vision/Vision'
 import Service from './service/Service'
 // import SecondaryBtn from '../../components/secondaryBtn/SecondaryBtn'
-
+import Footer from '../../components/footer/Footer';
 import SecondaryBtn from "../../components/secondaryBtn/SecondaryBtn"
 import Cards from '../../components/cards/Cards'
 import { doc, getDoc, setDoc } from 'firebase/firestore'
@@ -146,7 +146,7 @@ try {
             <div className="details-container">
               <div className="details">
                 <div className="title">
-                  <span>WHY AUTONO</span>
+                  <span>WHY AUTONO ?</span>
                   <p>A different approach, using a new method of manufacturing.</p>
                 </div>
                 <div className="info">
@@ -197,15 +197,17 @@ try {
               <span>CAREERS</span>
               <p>We’re looking for innovative talent to join our team. See all positions and submit your CV</p>
 
-              <div className="button">
-
+                <div className="button">
+                  <SecondaryBtn content='Openings' theme='black' />
+                </div>
               </div>
-              <SecondaryBtn content='Openings' theme='black' />
-            </div>
           </div>
-          <Cards />
+          <Cards/>
         </div>
+
+        <Footer/>
       </div>
+
     </div>
   )
 }

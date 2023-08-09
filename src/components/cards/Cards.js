@@ -28,11 +28,23 @@ export default function Cards() {
  const [index, setIndex]= useState(0);
 
   useEffect(() => {
-  
+    // document.getElementById('headcont').style.opacity = 0;
+    // document.getElementById('paracont').style.opacity = 0;
+    // document.getElementById('headcont').style.opacity = 1;
+    // document.getElementById('paracont').style.opacity = 1;
     //Implementing the setInterval method
     const interval = setInterval(() => {
       // console.log("interval hits ", index);
         setIndex((index + 1)%4);
+        document.getElementById('headcont').style.opacity = 1;
+        document.getElementById('paracont').style.opacity = 1;
+        
+       setTimeout(()=>{
+        document.getElementById('headcont').style.opacity = 0;
+        document.getElementById('paracont').style.opacity = 0;
+       },3700)
+       
+        
     }, 4000);
 
     //Clearing the interval
@@ -44,9 +56,9 @@ export default function Cards() {
     <>
          <div className="card-container">
             <div className="card">
-            <span>{carddata[index].head}</span>
+            <span className='head' id='headcont'>{carddata[index].head}</span>
               <p className='subheading'>{carddata[index].subhead}</p>
-              <p className='para'>{carddata[index].para} </p>
+              <p className='para' id='paracont'>{carddata[index].para} </p>
               
             </div>
             <div className='cardLower'>
