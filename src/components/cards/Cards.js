@@ -64,10 +64,14 @@ export default function Cards() {
             <div className='cardLower'>
             <SecondaryBtn content='Apply Now' theme='black' />
             <ul>
-                <span style={{backgroundColor:index===0? "white":""}} onClick={()=>{setIndex(0)}}></span>
-                <span style={{backgroundColor:index===1? "white":""}}  onClick={()=>{setIndex(1)}}></span>
-                <span style={{backgroundColor:index===2? "white":""}}  onClick={()=>{setIndex(2)}}></span>
-                <span style={{backgroundColor:index===3? "white":""}}  onClick={()=>{setIndex(3)}}></span>
+                <span style={{backgroundColor:index===0? "white":""}} onClick={()=>{setIndex(0); document.getElementById('headcont').style.opacity = 1;
+        document.getElementById('paracont').style.opacity = 1;}}></span>
+                <span style={{backgroundColor:index===1? "white":""}}  onClick={()=>{setIndex(1); document.getElementById('headcont').style.opacity = 1;
+        document.getElementById('paracont').style.opacity = 1;}}></span>
+                <span style={{backgroundColor:index===2? "white":""}}  onClick={()=>{setIndex(2); document.getElementById('headcont').style.opacity = 1;
+        document.getElementById('paracont').style.opacity = 1;}}></span>
+                <span style={{backgroundColor:index===3? "white":""}}  onClick={()=>{setIndex(3); document.getElementById('headcont').style.opacity = 1;
+        document.getElementById('paracont').style.opacity = 1;}}></span>
 
                 
               </ul>
