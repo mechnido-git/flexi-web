@@ -306,7 +306,7 @@
 .card-container .card .head{
   opacity: 0;
     position: absolute;
-    transition: opacity 1s ease-out;
+    transition: opacity 0.5s linear;
   
     top:0px;
 
@@ -322,7 +322,7 @@
     opacity: 0;
     
     position: absolute;
-    transition: opacity 1s ease-out;
+    transition: opacity 0.5s linear;
   
     
 }

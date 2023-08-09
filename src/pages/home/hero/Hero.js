@@ -20,8 +20,12 @@ function Hero() {
                         width: '100%',
                         pagination: false,
                         height: '100%',
-                        speed: 800,
+                        speed: 1000,
                         type: 'loop',
+                        easing: "cubic-bezier(0.25, 0.5, 0.5, 0.8)",
+                        drag:true,
+                        direction:"ltr"
+                       
                     }}
                     onMove={(splide, prev, next) => {
                         setModel(prev);
